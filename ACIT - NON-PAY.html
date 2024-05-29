@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;800&family=Cairo:wght@200..1000&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title> ACIT </title>
+</head>
+
+<body>
+    <main class="container main-holder">
+        <h1> Agent-Customer interactions tracker ( ACIT ) </h1>
+        <div class="tabs">
+
+            <p class="tab active-tab"> Quality Tracker </p>
+            <p class="tab"> Call back tracker </p>
+            <p class="tab"> Interactions History </p>
+            <p class="tab"> Updates & Announcements </p>
+            <p class="tab"> Other </p>
+
+        </div>
+        <div class="call-data my-4">
+            <!-- ACC # -->
+            <div class="form-group">
+                <label for=""> Acc# </label>
+                <input type="number" id="account-number" class="form-control account-number">
+            </div>
+            <!-- PHone #  -->
+            <div class="form-group">
+                <label for="phone-number"> Phone# </label>
+                <input type="number" id="phone-number" class="form-control account-number">
+            </div>
+            <div class="form-group">
+                <label for="caller-name" class=""> Caller Name</label>
+                <input type="text" id="caller-name" class=" form-control caller-name">
+            </div>
+            <div class="is-eligible">
+                <span class="fw-bold"> Mobile Eligible? </span>
+                <div class="answer-btns ">
+                    <button class="answer-btn yes-bnt  is-mobile-eligible-answer-btn"> Yes
+                    </button>
+                    <button class="answer-btn no-bnt  active-btn is-mobile-eligible-answer-btn"> No </button>
+                </div>
+            </div>
+            <div class="is-eligible">
+                <span class="fw-bold"> Fiber capable? </span>
+                <div class="answer-btns">
+                    <button class="answer-btn yes-bnt  is-fiber-capable-answer-btn"> Yes
+                    </button>
+                    <button class="answer-btn no-bnt active-btn is-fiber-capable-answer-btn"> No </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="attrs-and-notes">
+            <div class="content-wrapper">
+                <div class="attributes-holder">
+
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="welcome">Welcome</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="welcome"></i>
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="name">Name</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="name"></i>
+
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="address">Address</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="address"></i>
+
+                    </div>
+                    <div class="attribute-holder">
+
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="BCB#">
+                            BCB#
+                        </p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="BCB"></i>
+                    </div>
+
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="empathy">
+                            Empathy
+                        </p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="empathy"></i>
+                    </div>
+
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="assurance">Assurance</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="assurance"></i>
+
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="rephrasing">Rephrasing</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="rephrasing"></i>
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="cpc"> Contact preferences </p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="cpc"></i>
+                    </div>
+
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="stat">STAT</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="stat"></i>
+
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="resolution">Resolution</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="resolution"></i>
+
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="self-help"> Self help </p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="self-help"></i>
+                    </div>
+
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="set-expectations">Set Expectations </p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="set-expectations"></i>
+                    </div>
+
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="check-services">Other service working ?</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="check-services"></i>
+
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="other-questions"> Answered questions ?</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="other-questions"></i>
+
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="mobile-up-sell"> Mobile up-sell</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="mobile-up-sell"></i>
+                    </div>
+                    <div class="attribute-holder">
+                        <p class="quality-attribute" attrName="documentation">Documentation</p>
+                        <i class="fa-solid fa-caret-down show-examples-icon" reveal="documentation"></i>
+                    </div>
+
+                    <!-- <p class="quality-attribute"></p> -->
+                </div>
+                <button class="btn btn-secondary schedule-cb-btn"> Schedule callback?</button>
+                <div class="bcb-data d-none">
+                    <div class="form-group">
+                        <label for="bcb-number"> Best call back number </label>
+                        <input type="text" if="bcb-number" class="bcb-number form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="call-back-date"> Call back at </label>
+                        <input type="time" name="" id="call-back-date" class="form-control">
+                        <!-- <button> Today</button> -->
+                    </div>
+                    <button class="btn btn-primary"> Start </button>
+                </div>
+                <div class="notes-data w-100 d-none">
+                    <label class="d-block"> Notes </label>
+                    <textarea name="" id="" class="w-100"></textarea>
+                </div>
+                <button class="save-call-btn btn btn-warning my-2 d-block">
+                    Reset
+                </button>
+            </div>
+            <div class="notes-on-call">
+                <div class="concern-desc form-group">
+                    <div class="label-and-copy">
+                        <label for="concern-desc-input" class="form-label"> Concern description</label>
+                        <button class="copy"> Copy</button>
+                    </div>
+                    <textarea name="" id=""></textarea>
+                    <!-- <input type="text" class="form-control" id="concern-desc-input"> -->
+                </div>
+                <div class="work-log form-group">
+                    <div class="label-and-copy">
+                        <label for="work-log-input" class="form-label"> Work log</label>
+                        <button class="copy"> Copy</button>
+                    </div>
+                    <textarea name="" id="" cols="50" rows="5"></textarea>
+
+                </div>
+                <!-- <input type="text" class="form-control" id="work-log-input"> -->
+            </div>
+        </div>
+
+        <div class="exmaples-holder">
+
+            <div class="example-type d-none" exampleOf="welcome">
+                <ul>
+                    <li> What can I help you with?</li>
+                    <li> How Can I be of help </li>
+                </ul>
+            </div>
+            <div class="example-type d-none" exampleOf="name"> Examples on Name</div>
+            <div class="example-type d-none" exampleOf="address"> Examples on address</div>
+            <div class="example-type d-none" exampleOf="BCB"> Examples on BCN </div>
+            <div class="example-type d-none" exampleOf="empathy">
+                <ul>
+                    <li> I would feel the same If I were in your shoes </li>
+                    <li> I am really sorry to hear about your experience and I completely understand your frustration,
+                        I assure you that
+                        everything will be handled. </li>
+                    <li> I can imagine what you must be going through. </li>
+                    <li> I can imagine how you feel in this situation, we will sort this out.</li>
+                    <li> I understand your perspective,</li>
+                    <li> I am so sorry for any inconvenience we have cost you</li>
+                    <li> I am really as confused as you are right know, this really should not happen</li>
+                    <li> This must be frustrating for you I really apologize for this inconvenient situation that you
+                        have been through</li>
+                    <li> First of all, we owe you an apology for this frustrating situation.</li>
+                    <li>I am really sorry for the frustration this must have caused, Be assured that I will do mybest to
+                        get this resolved for
+                        you, If you can just confirm the first and last name and the service address this will be
+                        appreciated.</li>
+                </ul>
+                <h2>1. Billing Errors</h2>
+                <p><strong>Scenario:</strong> A customer is upset about a billing error.</p>
+                <p><strong>Response:</strong></p>
+                <ul>
+                    <li><strong>Acknowledge the Issue:</strong> "I understand how frustrating it must be to see an
+                        unexpected charge on
+                        your bill."</li>
+                    <li><strong>Apologize and Reassure:</strong> "I'm really sorry for the inconvenience this has caused
+                        you. Let's get
+                        this sorted out right away."</li>
+                    <li><strong>Action Plan:</strong> "I will review your billing history to identify the error and
+                        correct it
+                        immediately."</li>
+                </ul>
+
+                <h2>2. Service Disruptions</h2>
+                <p><strong>Scenario:</strong> A customer is angry about a service disruption affecting their billing.
+                </p>
+                <p><strong>Response:</strong></p>
+                <ul>
+                    <li><strong>Acknowledge the Impact:</strong> "I can imagine how disruptive this must be for you,
+                        especially since
+                        you're paying for a service that you can't use."</li>
+                    <li><strong>Apologize Sincerely:</strong> "I'm truly sorry that you're experiencing this. It’s
+                        certainly not the
+                        level of service we strive to provide."</li>
+                    <li><strong>Solution Offer:</strong> "I will check on the status of the service restoration and
+                        ensure you're
+                        credited for the downtime."</li>
+                </ul>
+
+                <h2>3. High Charges</h2>
+                <p><strong>Scenario:</strong> A customer is shocked by a high bill they weren’t expecting.</p>
+                <p><strong>Response:</strong></p>
+                <ul>
+                    <li><strong>Express Understanding:</strong> "I can see why you’d be concerned about such a high
+                        bill. That would
+                        surprise anyone."</li>
+                    <li><strong>Apologize and Clarify:</strong> "I’m sorry for any confusion or distress this has
+                        caused. Let me take a
+                        closer look to see what might have led to these charges."</li>
+                    <li><strong>Provide Assistance:</strong> "I will break down the charges for you and explore any
+                        options we have to
+                        reduce your bill."</li>
+                </ul>
+
+                <h2>4. Payment Difficulties</h2>
+                <p><strong>Scenario:</strong> A customer is struggling to pay their bill.</p>
+                <p><strong>Response:</strong></p>
+                <ul>
+                    <li><strong>Show Compassion:</strong> "I’m sorry to hear that you're going through a tough time. It
+                        must be really
+                        stressful to worry about this bill on top of everything else."</li>
+                    <li><strong>Offer Help:</strong> "Let's see how we can assist you. We have several payment plans and
+                        options that
+                        might help."</li>
+                    <li><strong>Follow Through:</strong> "I’ll outline the available options and help you set up a
+                        payment plan that
+                        works for you."</li>
+                </ul>
+
+                <h2>5. Repeated Issues</h2>
+                <p><strong>Scenario:</strong> A customer is frustrated with repeated billing problems.</p>
+                <p><strong>Response:</strong></p>
+                <ul>
+                    <li><strong>Acknowledge Their Frustration:</strong> "I completely understand your frustration,
+                        especially since this
+                        isn’t the first time you’ve had to deal with this issue."</li>
+                    <li><strong>Apologize for Repeated Issues:</strong> "I’m very sorry that you’ve had to experience
+                        this multiple
+                        times. This is not the experience we want for our customers."</li>
+                    <li><strong>Commit to Resolution:</strong> "I will personally ensure that this issue is resolved
+                        once and for all,
+                        and I’ll monitor your account to prevent it from happening again."</li>
+                </ul>
+
+                <h2>General Tips for Expressing Empathy:</h2>
+                <ul>
+                    <li><strong>Listen Actively:</strong> Give the customer your full attention and avoid interrupting.
+                    </li>
+                    <li><strong>Validate Their Feelings:</strong> Use phrases like "I understand" or "That sounds really
+                        challenging."
+                    </li>
+                    <li><strong>Use the Customer's Name:</strong> Personalize your interaction to make it more genuine.
+                    </li>
+                    <li><strong>Maintain a Calm and Reassuring Tone:</strong> Your tone of voice can convey empathy just
+                        as much as your
+                        words.</li>
+                    <li><strong>Follow Through:</strong> Ensure any promises made are kept and provide updates if there
+                        are delays.</li>
+                </ul>
+
+                <p>By combining these empathetic responses with practical solutions, you can help ease the customer’s
+                    concerns and build
+                    a positive rapport.</p>
+
+            </div>
+            <div class="example-type d-none" exampleOf="assurance">
+                <ul>
+                    <li>Sure thing, I am on it</li>
+                    <li>No worries you are all set</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="example-type d-none" exampleOf="rephrasing">
+                <ul>
+                    <li> "Just to confirm, you're experiencing [describe the issue]. Is that correct?” </li>
+                </ul>
+            </div>
+            <div class="example-type d-none" exampleOf="cpc"> </div>
+            <div class="example-type d-none" exampleOf="stat"> </div>
+            <div class="example-type d-none" exampleOf="resolution"> </div>
+            <div class="example-type d-none" exampleOf="self-help">
+                <ul>
+                    <li>
+                        If you wanted to manage your router settings and find the self-install instructions you can do
+                        it
+                        from Optimum.net
+                        website , would you like me to assist with creating an account on there?
+                    </li>
+                    <li>
+                        Don’t forget to use Optimum.net as from there you can process your payments, check your balance,
+                        and do some
+                        troubleshooting steps if this issue happened again.
+                    </li>
+                    <li>
+                        Don’t forget to use Optimum.net if you wanted to reschedule / cancel or track the technician
+                        before
+                        the
+                        appointment.
+                    </li>
+                    <li>and also, you could use Optimum.net if you wanted to manage your recordings and schedule new
+                        recordings from there.</li>
+                </ul>
+
+
+            </div>
+            <div class="example-type d-none" exampleOf="set-expectations"> </div>
+            <div class="example-type d-none" exampleOf="check-services">
+                <ul>
+                    <li>- other than the issue with the cable, are the other services working as expected?”</li>
+                </ul>
+            </div>
+            <div class="example-type d-none" exampleOf="other-questions"> </div>
+            <div class="example-type d-none" exampleOf="mobile-up-sell">
+                <ul>
+                    <li> It is not just the fifteen dollars, you will also be offered a lot of discounts that’s like
+                        savings on top of savings. </li>
+                    <li> I can see that you qualify for additional savings on your internet bill if you switch to
+                        optimum for your mobile phone
+                        services, If you would like to learn more I can transfer you to our mobile sales team.</li>
+                    <li> I can see that you want your internet and video services separated from cell phone services,
+                        but at least you can hear
+                        what our sales team had to offer you, and I believe that saving money at the same time doesn’t
+                        hurt either. </li>
+                    <li> I can see why you feel like you would want to give this some more thought, the great thing is,
+                        if we got u signed up now
+                        for Optimum Mobile you will save a lot, so why not just hear what our sales team has to offer?
+                    </li>
+                </ul>
+            </div>
+            <div class="example-type d-none" exampleOf="documentation"> </div>
+
+        </div>
+
+    </main>
+
+    <style>
+        /* Global */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: cairo;
+        }
+
+        button {
+            border: none;
+            padding: 6px;
+            background-color: aliceblue;
+            border-radius: 5px;
+
+        }
+
+        .active-btn {
+            background-color: #0b5ed7;
+            color: white;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        body {
+            min-height: 100vh;
+            /* display: flex; */
+            /* align-items: start; */
+            /* justify-content: center; */
+            background-color: #f5f7f8;
+
+        }
+
+        .main-holder {
+            margin-top: 150px;
+
+        }
+
+        .tabs {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 24px 48px;
+            cursor: pointer;
+            margin: 0px;
+            font-weight: bold;
+        }
+
+        .active-tab {
+            background-color: white;
+        }
+
+        .attrs-and-notes {
+            display: flex;
+            background-color: white;
+            padding: 20px;
+            border-radius: 2px;
+        }
+
+        .content-wrapper {
+            flex: 2;
+        }
+
+        .notes-on-call {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .notes-on-call textarea:first-child {
+            height: 25%;
+            width: 100%;
+        }
+
+        .notes-on-call textarea:last-child {
+            height: 75%;
+            width: 100%;
+
+        }
+
+        .label-and-copy {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .is-eligible {}
+
+        .answer-btns {
+            display: flex;
+            gap: 2px;
+        }
+
+        .answer-btn {
+            flex: 1;
+        }
+
+        .call-data {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+        }
+
+        .save-call-btn {
+            /* width: 100%; */
+            cursor: pointer;
+            padding: 10px 15px;
+            border: none;
+
+        }
+
+        .attributes-holder {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+
+
+        }
+
+        .attribute-holder {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .quality-attribute {
+            padding: 5px;
+            background-color: aliceblue;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .quality-attribute:hover {
+            border: 1px dashed black;
+        }
+
+        .show-examples-icon {
+            cursor: pointer;
+        }
+
+        .bcb-data {
+            display: flex;
+            gap: 10px;
+        }
+
+        .show-examples:hover {
+            color: green;
+        }
+
+        .completed {
+            background-color: #0b5ed7;
+            color: white;
+        }
+
+        .not-completed {
+            background-color: red;
+            color: white;
+        }
+
+        .save-call-btn {}
+
+
+        .exmaples-holder {
+            padding: 20px;
+        }
+    </style>
+    <script>
+        // Elements
+        const qualityAttributes = document.querySelectorAll('.quality-attribute')
+
+        // Functions 
+
+        // Alternate answer
+        const mobileEligibleBtns = document.querySelectorAll('.is-mobile-eligible-answer-btn')
+        const fiberCapableBtns = document.querySelectorAll('.is-fiber-capable-answer-btn')
+
+        mobileEligibleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                mobileEligibleBtns.forEach(btn => {
+                    btn.classList.remove('active-btn')
+                })
+                btn.classList.add('active-btn')
+            })
+
+        })
+        fiberCapableBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                fiberCapableBtns.forEach(btn => {
+                    btn.classList.remove('active-btn')
+                })
+                btn.classList.add('active-btn')
+            })
+
+        })
+
+
+
+
+        qualityAttributes.forEach(qualityAttribute => {
+            const attributeName = qualityAttribute.getAttribute('attrName')
+
+            qualityAttribute.addEventListener('click', () => {
+                let isCompleted = window.localStorage.getItem(`${attributeName}-completed`) === 'true'
+
+                if (isCompleted) {
+                    window.localStorage.setItem(`${attributeName}-completed`, 'false')
+                } else {
+                    window.localStorage.setItem(`${attributeName}-completed`, 'true')
+                }
+                qualityAttribute.classList.toggle('completed')
+                console.log(window.localStorage)
+            })
+
+            // Initial check and styling
+            reflectProgressToStyle(qualityAttribute, attributeName)
+        })
+
+        function reflectProgressToStyle(qualityAttribute, attributeName) {
+            let isCompleted = window.localStorage.getItem(`${attributeName}-completed`) === 'true'
+            if (isCompleted) {
+                qualityAttribute.classList.add('completed')
+            } else {
+                qualityAttribute.classList.remove('completed')
+            }
+        }
+
+        // Save the progress and reset
+        const saveProgressBtn = document.querySelector('.save-call-btn')
+        saveProgressBtn.addEventListener('click', saveProgress)
+        function saveProgress() {
+            qualityAttributes.forEach(qualityAttribute => {
+                const attributeName = qualityAttribute.getAttribute('attrName')
+                window.localStorage.setItem(`${attributeName}-completed`, 'false')
+                reflectProgressToStyle(qualityAttribute, attributeName)
+            })
+
+        }
+
+        // change taps
+        const tabs = document.querySelectorAll('.tab')
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                tabs.forEach(tab => { tab.classList.remove('active-tab') })
+                e.target.classList.add('active-tab')
+            })
+        })
+
+        // Best call back 
+        const BCBBtn = document.querySelector('.schedule-cb-btn')
+        const BCBProcess = document.querySelector('.bcb-data')
+        BCBBtn.addEventListener('click', () => {
+            BCBProcess.classList.toggle('d-none')
+
+        })
+        // Show examples 
+        const showExamplesIcons = document.querySelectorAll('.show-examples-icon')
+        const examplesTypes = document.querySelectorAll('.example-type')
+
+
+        showExamplesIcons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const btnType = btn.getAttribute('reveal')
+                examplesTypes.forEach(type => {
+                    type.classList.add('d-none')
+                    if (type.getAttribute('exampleOf') == btnType) { type.classList.remove('d-none') }
+                })
+            })
+
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>
